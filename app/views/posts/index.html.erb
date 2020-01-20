@@ -1,0 +1,8 @@
+<h1>Post#Index</h1>
+
+<%= link_to "Add post", "posts/new" %>
+
+<% @post.each do |post| %>
+    <h2><%= post.title %></h2>
+    <p><%= post.body %></p>
+<% end %>
