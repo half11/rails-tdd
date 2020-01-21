@@ -23,9 +23,7 @@ class PostFlowTest < ActionDispatch::IntegrationTest
     get "/posts/new"
     assert_select "form" do |elements|
       elements.each do |element|
-        #deberia ser 4 con el token del form 
-        #pero por alguna razon no lo cuenta
-        assert_select element, "input", 3
+        assert_select element, "input", 3 #3 campos en form, no cuenta token
       end
     end
 
